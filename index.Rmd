@@ -61,10 +61,11 @@ Chapter5 introduces the analysis of processed CARD data.
 
 
 #image_path <- NULL
-setwd('/share/projects/SOP/Functional_Analysis/Tongbangzhuo/Phase1/Metacyc/Demodata/pathway_bacteria/')
 
-image_path <- system('ls /share/projects/SOP/Functional_Analysis/Tongbangzhuo/Phase1/Metacyc/Demodata/pathway_bacteria/*.PNG', intern = TRUE) %>% unlist() %>% as.vector()
+image_path <- system('ls /share/projects/SOP/Functional_Analysis/Tongbangzhuo/Phase1/Metacyc/Demodata/pathway_bacteria/*.png', intern = TRUE) %>% unlist() %>% as.vector()
 ## In the graph(s) below, green KO are those KOs enriched in GroupB, red KO are those KOs enriched in GroupA
+
+system('cp /share/projects/SOP/Functional_Analysis/Tongbangzhuo/Phase1/Metacyc/Demodata/pathway_bacteria/*.png ./')
 
 knitr::include_graphics(image_path)
 ```
